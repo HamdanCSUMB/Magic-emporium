@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".magic_emporiumDriver.ViewInventoryActivity"
+    android:windowSoftInputMode="adjustResize">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.6"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchBar"
+        app:layout_constraintVertical_bias="0.155"
+        app:layout_constraintWidth_percent="1.0" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/cartRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="4dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.6"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchBar"
+        app:layout_constraintVertical_bias="0.155"
+        app:layout_constraintWidth_percent="1.0" />
+
+
+
+    <EditText
+        android:id="@+id/searchBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:hint="@string/search_here"
+        android:inputType="text"
+        android:textAlignment="center"
+        app:layout_constraintStart_toEndOf="@+id/dropDown"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.65" />
+
+    <Spinner
+        android:id="@+id/dropDown"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintHeight_percent="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.24" />
+
+    <Button
+        android:id="@+id/AddToCart"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/add_to_cart"
+        android:visibility="gone"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintWidth_percent="0.45"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerView" />
+
+    <Button
+        android:id="@+id/viewCart"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/view_cart"
+        android:visibility="gone"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintWidth_percent="0.45"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/AddToCart"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerView" />
+
+    <Button
+        android:id="@+id/backCancel"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/back_cancel"
+        android:visibility="gone"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintWidth_percent="0.45"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AddToCart" />
+
+    <Button
+        android:id="@+id/emptyCart"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/empty_cart"
+        android:visibility="gone"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintWidth_percent="0.45"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/backCancel"
+        app:layout_constraintTop_toBottomOf="@+id/viewCart" />
+
+    <Button
+        android:id="@+id/purchaseCart"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/purchase_cart"
+        android:visibility="gone"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintWidth_percent="0.45"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cartRecyclerView" />
+
+    <Button
+        android:id="@+id/removeItemFromCart"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/remove_item"
+        android:visibility="gone"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintWidth_percent="0.45"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/purchaseCart"
+        app:layout_constraintTop_toBottomOf="@+id/cartRecyclerView" />
+
+    <Button
+        android:id="@+id/backFromCart"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/back_cancel"
+        android:visibility="gone"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintWidth_percent="0.45"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/purchaseCart" />
+    <Button
+        android:id="@+id/cartEmptyCart"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/empty_cart"
+        android:visibility="gone"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintWidth_percent="0.45"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/backFromCart"
+        app:layout_constraintTop_toBottomOf="@+id/removeItemFromCart" />
+    <Button
+        android:id="@+id/addItem"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/add_item"
+        android:visibility="gone"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintWidth_percent="0.45"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerView" />
+
+    <Button
+        android:id="@+id/modifyItem"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/modify_item"
+        android:visibility="gone"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintWidth_percent="0.45"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/addItem"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerView" />
+
+    <Button
+        android:id="@+id/adminBackCancel"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/back_cancel"
+        android:visibility="gone"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintWidth_percent="0.45"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addItem" />
+
+    <Button
+        android:id="@+id/deleteItem"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/delete_item"
+        android:visibility="gone"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintWidth_percent="0.45"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/adminBackCancel"
+        app:layout_constraintTop_toBottomOf="@+id/modifyItem" />
+
+    <TextView
+        android:id="@+id/selectedItemText"
+        android:layout_width="233dp"
+        android:layout_height="37dp"
+        android:ems="10"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchBar" />
+
+    <ImageButton
+        android:id="@+id/itemSearchButton"
+        android:layout_width="40dp"
+        android:layout_height="45dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/searchBar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.463"
+        app:srcCompat="@android:drawable/ic_menu_search" />
+
+    <EditText
+        android:id="@+id/adminItemNameEditText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="25dp"
+        android:hint="@string/item_name"
+        android:inputType="text"
+        android:visibility="gone"
+        app:layout_constraintWidth_percent="0.80"
+        app:layout_constraintHeight_percent="0.08"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/adminItemDescriptionEditText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="25dp"
+        android:hint="@string/description"
+        android:inputType="textMultiLine"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.08"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/adminItemNameEditText"
+        app:layout_constraintWidth_percent="0.80" />
+
+    <EditText
+        android:id="@+id/adminItemPriceEditText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="25dp"
+        android:hint="@string/price"
+        android:inputType="numberDecimal"
+        android:visibility="gone"
+        android:maxLength="7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.08"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/adminItemCategorySpinner"
+        app:layout_constraintWidth_percent="0.80" />
+
+    <EditText
+        android:id="@+id/adminItemStockEditText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="25dp"
+        android:hint="@string/stock"
+        android:inputType="number"
+        android:visibility="gone"
+        android:digits="0123456789"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.08"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/adminItemPriceEditText"
+        app:layout_constraintWidth_percent="0.80" />
+
+    <Button
+        android:id="@+id/adminItemCreateSubmit"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="25dp"
+        android:text="@string/submit"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.08"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/adminItemStockEditText"
+        app:layout_constraintWidth_percent="0.80" />
+
+    <Button
+        android:id="@+id/adminItemCreateCancel"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="25dp"
+        android:text="@string/back_cancel"
+        android:visibility="gone"
+        app:layout_constraintWidth_percent="0.80"
+        app:layout_constraintHeight_percent="0.08"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/adminItemCreateSubmit" />
+    <Button
+        android:id="@+id/adminItemModifySubmit"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="25dp"
+        android:text="@string/submit"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.08"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/adminItemStockEditText"
+        app:layout_constraintWidth_percent="0.80" />
+
+    <Button
+        android:id="@+id/adminItemModifyCancel"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="25dp"
+        android:text="@string/back_cancel"
+        android:visibility="gone"
+        app:layout_constraintWidth_percent="0.80"
+        app:layout_constraintHeight_percent="0.08"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/adminItemModifySubmit" />
+
+    <Spinner
+        android:id="@+id/adminItemCategorySpinner"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:visibility="gone"
+        app:layout_constraintWidth_percent="0.80"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/adminItemDescriptionEditText" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,10 @@
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        //jcenter() // Warning: this repository is going to shut down soon //commented this out as it will be deprecated soon and serves no purpose for what I'm doing
+    }
+}
+rootProject.name = "Magic_Emporium"
+include ':app'

@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".magic_emporiumDriver.ModifyUsersActivity">
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerAdminUserView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.6"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userSearchBar"
+        app:layout_constraintVertical_bias="0.155"
+        app:layout_constraintWidth_percent="1.0" />
+
+
+    <EditText
+        android:id="@+id/userSearchBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="32dp"
+        android:hint="@string/search_here"
+        android:inputType="text"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_percent="0.65" />
+    <ImageButton
+        android:id="@+id/userSearchButton"
+        android:layout_width="40dp"
+        android:layout_height="45dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerAdminUserView"
+        app:layout_constraintStart_toEndOf="@+id/userSearchBar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.463"
+        app:srcCompat="@android:drawable/ic_menu_search" />
+
+    <Button
+        android:id="@+id/adminAddUserButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/add_user"
+        android:visibility="gone"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintWidth_percent="0.45"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerAdminUserView" />
+
+    <Button
+        android:id="@+id/adminModifyUser"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/modify_user"
+        android:visibility="gone"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintWidth_percent="0.45"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/adminAddUserButton"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerAdminUserView" />
+
+    <Button
+        android:id="@+id/adminModifyBackCancel"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/back_cancel"
+        android:visibility="gone"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintWidth_percent="0.45"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/adminAddUserButton" />
+
+    <Button
+        android:id="@+id/adminDeleteUser"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/delete_user"
+        android:visibility="gone"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintWidth_percent="0.45"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/adminModifyBackCancel"
+        app:layout_constraintTop_toBottomOf="@+id/adminModifyUser" />
+
+    <TextView
+        android:id="@+id/selectedUserText"
+        android:layout_width="233dp"
+        android:layout_height="37dp"
+        android:ems="10"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerAdminUserView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userSearchBar" />
+
+
+    <EditText
+        android:id="@+id/adminUserNameEditText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="25dp"
+        android:inputType="text"
+        android:visibility="gone"
+        android:hint="@string/user_name"
+        app:layout_constraintWidth_percent="0.80"
+        app:layout_constraintHeight_percent="0.08"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/adminUserLoginEditText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="25dp"
+        android:inputType="text"
+        android:visibility="gone"
+        android:hint="@string/login"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.08"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/adminUserNameEditText"
+        app:layout_constraintWidth_percent="0.80" />
+
+    <EditText
+        android:id="@+id/adminUserPasswordEditText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="25dp"
+        android:inputType="text"
+        android:visibility="gone"
+        android:hint="@string/password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.08"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/adminUserLoginEditText"
+        app:layout_constraintWidth_percent="0.80"
+        tools:ignore="TextFields" />
+
+    <CheckBox
+        android:id="@+id/adminUserAdminStatusCheckBox"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="25dp"
+        android:hint="@string/are_they_admin"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.08"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/adminUserPasswordEditText"
+        app:layout_constraintWidth_percent="0.80" />
+
+    <Button
+        android:id="@+id/adminUserCreateSubmit"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="25dp"
+        android:text="@string/submit"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.08"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/adminUserAdminStatusCheckBox"
+        app:layout_constraintWidth_percent="0.80" />
+
+    <Button
+        android:id="@+id/adminUserCreateCancel"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="25dp"
+        android:text="@string/back_cancel"
+        android:visibility="gone"
+        app:layout_constraintWidth_percent="0.80"
+        app:layout_constraintHeight_percent="0.08"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/adminUserCreateSubmit" />
+    <Button
+        android:id="@+id/adminUserModifySubmit"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="25dp"
+        android:text="@string/submit"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.08"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/adminUserAdminStatusCheckBox"
+        app:layout_constraintWidth_percent="0.80" />
+
+    <Button
+        android:id="@+id/adminUserModifyCancel"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="25dp"
+        android:text="@string/back_cancel"
+        android:visibility="gone"
+        app:layout_constraintWidth_percent="0.80"
+        app:layout_constraintHeight_percent="0.08"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/adminUserModifySubmit" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

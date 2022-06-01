@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".magic_emporiumDriver.AccountSettingsActivity">
+
+    <TextView
+        android:id="@+id/accountSettingsTitleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/account_settings"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.13" />
+    <Button
+        android:id="@+id/userDeleteAccountButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/delete_account"
+        app:layout_constraintBottom_toTopOf="@id/userChangeNameButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.08"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/accountSettingsTitleText"
+        app:layout_constraintWidth_percent="0.65" />
+    <Button
+        android:id="@+id/userChangeNameButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/change_name"
+        app:layout_constraintTop_toBottomOf="@id/userDeleteAccountButton"
+        app:layout_constraintBottom_toTopOf="@id/userChangePassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.08"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.65" />
+    <Button
+        android:id="@+id/userChangePassword"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/change_password"
+        app:layout_constraintTop_toBottomOf="@id/userChangeNameButton"
+        app:layout_constraintBottom_toTopOf="@id/backFromAccountSettings"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.08"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.65" />
+
+
+    <Button
+        android:id="@+id/backFromAccountSettings"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/back_cancel"
+        app:layout_constraintTop_toBottomOf="@id/userChangePassword"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.08"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.65" />
+    <Button
+        android:id="@+id/backFromAccountInputConfirm"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/back_cancel"
+        android:layout_marginBottom="50dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.08"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.65" />
+    <Button
+        android:id="@+id/userDeleteConfirm"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/submit"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/accountSettingsInputField"
+        app:layout_constraintBottom_toTopOf="@id/backFromAccountInputConfirm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.08"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.65" />
+    <Button
+        android:id="@+id/userChangeNameConfirm"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/submit"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/accountSettingsInputField"
+        app:layout_constraintBottom_toTopOf="@id/backFromAccountInputConfirm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.08"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.65" />
+    <Button
+        android:id="@+id/userChangePasswordConfirm"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/submit"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/accountSettingsInputField"
+        app:layout_constraintBottom_toTopOf="@id/backFromAccountInputConfirm"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.08"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintWidth_percent="0.65" />
+
+    <EditText
+        android:id="@+id/accountSettingsInputField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:hint="@string/type_here"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/accountSettingsTitleText"
+        app:layout_constraintBottom_toTopOf="@id/backFromAccountInputConfirm"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+    <TextView
+        android:id="@+id/inputInstructionsField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/type_here"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/accountSettingsTitleText"
+        app:layout_constraintBottom_toTopOf="@id/accountSettingsInputField"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

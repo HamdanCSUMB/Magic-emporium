@@ -1,0 +1,28 @@
+Assumption: user is going to be logging in as an admin
+On open of the application
+if the user is signed in already
+    immediately go to the "logged in" screen
+otherwise show the normal login screen
+
+The "logged in" screen for admins should have these buttons
+    Modify Users
+    View Inventory
+    Logout
+
+Modify Users
+    should take the admin to a page where there will be the following buttons
+        add User
+        Delete User
+        (if time permits, change password)
+
+View Inventory
+    Add Item
+        Creates a new item if item doesn't already exist
+        and gives it the corresponding data provided
+    Should be able to search for items
+        Should be able to search by category
+            Should be able to search by category and with the search function
+        Each Item should have the following buttons
+            Delete Item
+            Change Item Description
+            Change Stock

@@ -1,0 +1,79 @@
+<resources>
+    <string name="app_name">Magic_Emporium</string>
+    <string name="welcome_to_the_magic_emporium">Welcome to the Magic Emporium</string>
+    <string name="login_id">Login ID</string>
+    <string name="password">Password:</string>
+    <string name="submit">Submit</string>
+    <string name="new_account">New Account</string>
+    <string name="user_name">User Name</string>
+    <string name="create_your_account">Create Your Account</string>
+    <string name="invalid_password">Invalid Password</string>
+    <string name="invalid_username">Invalid Username</string>
+    <string name="invalid_login">Invalid Login</string>
+    <string name="invalid_login_information">Invalid Login information</string>
+    <string name="magic_emporium">Magic Emporium</string>
+    <string name="shop">Shop</string>
+    <string name="account_settings">Account Settings</string>
+    <string name="logout">Logout</string>
+    <string name="purchase_history">Purchase History</string>
+    <string name="admin_view">Admin View</string>
+    <string name="modify_inventory">Modify Inventory</string>
+    <string name="modify_users">Modify Users</string>
+    <string name="view_all_purchase_history">View all purchase history</string>
+    <string name="userView">User View</string>
+    <string name="if_you_see_this_something_went_wrong">if you see this something went wrong</string>
+    <string name="home_welcome_text">Hello %1$s %2$s</string>
+    <string name="search_here">Search here!</string>
+    <string name="add_to_cart">Add to Cart</string>
+    <string name="view_cart">View Cart</string>
+    <string name="back_cancel">Back / Cancel</string>
+    <string name="empty_cart">Empty Cart</string>
+    <string name="add_item">Add Item</string>
+    <string name="modify_item">Modify Item</string>
+    <string name="delete_item">Delete Item</string>
+    <string name="add_user">Add User</string>
+    <string name="modify_user">Modify User</string>
+    <string name="delete_user">Delete User</string>
+    <string name="name">Name</string>
+    <string name="stock">Stock</string>
+    <string name="price">Price</string>
+    <string name="description">Description</string>
+    <string name="item_deleted">That Item was already deleted</string>
+    <string name="item_name">Item Name</string>
+    <string name="selectModifyItem">Please select an item before trying to modify one.</string>
+    <string name="are_they_admin">Are They Admin?</string>
+    <string name="login">Login:</string>
+    <string name="namewcolon">Name:</string>
+    <string name="admin_status">Admin Status:</string>
+    <string name="adminstatus_user">Admin Stats: User</string>
+    <string name="adminstatus_admin">Admin Stats: Admin</string>
+    <string name="testintext">TESTING TEXT</string>
+    <string name="quantity">Quantity</string>
+    <string name="ppu">PPU:</string>
+    <string name="date">Date:</string>
+    <string name="user_id">User Id:</string>
+    <string name="delete_account">Delete Account</string>
+    <string name="change_name">Change Name</string>
+    <string name="change_password">Change Password</string>
+    <string name="type_here">Type Here</string>
+    <string name="purchase_cart">Purchase Cart</string>
+    <string name="maximum_allowed">You already have the maximum allowed in your cart!</string>
+    <string name="remove_item">Remove Item</string>
+
+    <string-array name="itemCategories">
+        <item>Any</item>
+        <item>Trinkets</item>
+        <item>Pets</item>
+        <item>Weapons</item>
+        <item>Furniture</item>
+        <item>Tools</item>
+
+    </string-array>
+    <string-array name="itemCreationCategories">
+        <item>Trinkets</item>
+        <item>Pets</item>
+        <item>Weapons</item>
+        <item>Furniture</item>
+        <item>Tools</item>
+    </string-array>
+</resources>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/userLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <!--
+            0dp is how you tell the constraint layout to autofill the space
+
+            notably different style from the other layout for the recycler view
+            this style was created under the direction of my friend Nic
+            -->
+            <TextView
+                android:id="@+id/billItemNameCardDisplay"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/item_name"
+                android:padding="4dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/billItemQuantity"
+                app:layout_constraintEnd_toStartOf="@+id/billPricePerUnit"/>
+
+            <TextView
+                android:id="@+id/billItemQuantity"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/quantity"
+                android:padding="4dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/billItemNameCardDisplay"
+                app:layout_constraintEnd_toStartOf="@+id/billItemPurchaseDate"
+                />
+
+            <TextView
+                android:id="@+id/billPricePerUnit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/ppu"
+                android:padding="4dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@+id/billItemPurchaseDate"
+                app:layout_constraintStart_toEndOf="@id/billItemNameCardDisplay"/>
+
+            <TextView
+                android:id="@+id/billItemPurchaseDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/date"
+                android:padding="4dp"
+                app:layout_constraintTop_toBottomOf="@+id/billPricePerUnit"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@id/billItemQuantity"/>
+
+            <TextView
+                android:id="@+id/billUserName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/user_name"
+                android:padding="4dp"
+                app:layout_constraintTop_toBottomOf="@id/billItemQuantity"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/billUserId"
+                app:layout_constraintBottom_toBottomOf="parent" />
+            <TextView
+                android:id="@+id/billUserId"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                android:text="@string/user_id"
+                app:layout_constraintTop_toBottomOf="@id/billItemPurchaseDate"
+                app:layout_constraintStart_toEndOf="@id/billUserName"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                >
+            </TextView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</FrameLayout>

@@ -1,0 +1,58 @@
+Assumption: user is logging in as a User
+On open of the application
+if the user is signed in already
+    immediately go to the "logged in" screen
+otherwise show the normal login screen
+
+The "logged in" screen for users should have these buttons
+    view inventory
+        takes user to the inventory screen
+    account settings
+        takes user to their account settings
+    purchase history
+        shows user a list of past purchases
+    logout
+        logs user out and brings them back to login
+
+
+View Inventory screen
+The view inventory should have
+    a search bar to look for items
+    a category drop down to be able to search for items by category
+        this should work with the search to look for the items in that category as well
+    The items themselves
+        Each item should have:
+            a name
+            (if time allows, an image of the item)
+            price
+            description
+            category
+            stock
+                if stock is 0 item will still be shown
+        button to add to cart
+            should prompt the user for how many to purchase
+                maybe a dropdown up to the current stock
+    back/cancel button to go back to the "logged in" screen
+    View cart button
+        Here the User will be able to view their cart of items they want to purchase
+            each item in the cart should have the following
+                remove from cart button
+                change amount
+                    allows the user to increase the amount of the item being purchased via a dropdown
+            There should be a button to purchase cart
+                in here it should prompt from past billing information or new billing information
+            cancel button to go back to inventory
+
+
+Account Settings
+    delete account
+    billing information
+    (if time permits, change password)
+
+Purchase history
+    takes the user to a screen of all past purchases
+    should be similar to the addcart format
+
+Logout
+    logs user out of their account and sends them back to the login
+
